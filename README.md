@@ -1,7 +1,28 @@
 # Eyes
 Eyes for iOS by Hefestru Fund  
 
+## Compatible Devices
+
+This app requires LiDAR scanner and is compatible with the following iPhone models:
+
+- iPhone 12 Pro
+- iPhone 12 Pro Max
+- iPhone 13 Pro
+- iPhone 13 Pro Max
+- iPhone 14 Pro
+- iPhone 14 Pro Max
+- iPhone 15 Pro
+- iPhone 15 Pro Max
+- iPhone 16 Pro
+- iPhone 16 Pro Max
+- iPhone 17 Pro
+- iPhone 17 Pro Max
+
 ![Project Reference Image](assets/example.jpeg)
+
+## Demo Video
+
+See the app in action: [Instagram Demo](https://www.instagram.com/p/DPppc_UDFv9?img_index=2)
 
 ## Project Description
 

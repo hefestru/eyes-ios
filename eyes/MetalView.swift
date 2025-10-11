@@ -245,12 +245,8 @@ struct MetalDepthView: View {
         // that corresponds to portrait phone orientation
         let stripWidthPixels = Int(Float(width) * CENTRAL_STRIP_WIDTH_RATIO)
         let stripStartX = (width - stripWidthPixels) / 2
-        let stripEndX = stripStartX + stripWidthPixels
-        
-        
         // Calculate visual strip directly in screen coordinates
         let screenWidth = UIScreen.main.bounds.width
-        let screenHeight = UIScreen.main.bounds.height
         
         // Map depth data strip directly to full screen
         let stripWidthScreen = screenWidth * CGFloat(CENTRAL_STRIP_WIDTH_RATIO)
@@ -262,9 +258,9 @@ struct MetalDepthView: View {
             self.stripStartX = stripStartXScreen
         }
         
-        // Analizar franja que corresponda a la orientación VERTICAL del teléfono
-        // Si datos son landscape (256x192) y teléfono es portrait, necesitamos
-        // analizar una franja HORIZONTAL en los datos para que corresponda a VERTICAL en el teléfono
+        // Analyze strip that corresponds to VERTICAL phone orientation
+        // If data is landscape (256x192) and phone is portrait, we need
+        // to analyze a HORIZONTAL strip in the data to correspond to VERTICAL on the phone
         
         let stripHeightPixels = Int(Float(height) * CENTRAL_STRIP_WIDTH_RATIO)
         let stripStartY = (height - stripHeightPixels) / 2
