@@ -31,15 +31,22 @@ Through **real-time audio feedback**, the app provides an extra layer of awarene
 
 The project began with the idea of **manufacturing and donating physical devices**, but to accelerate development and reach users sooner, the first step is creating an iOS app. In the future, the vision includes designing and donating dedicated devices for broader accessibility.  
 
+## Features
+
+### Audio Feedback
+The app provides real-time audio warnings when obstacles are detected in the detection zone. The Text-to-Speech system automatically announces obstacle distances in centimeters (e.g., "42" for 42 cm).
+
+See `TextToSpeech.swift` for detailed usage examples and documentation.
+
 ## TO-DO
 
-1. **Audio Feedback Enhancements**  
+[x] **Enhanced Audio Feedback**  
    Add reference sounds and spatial audio cues to help users understand their environment more intuitively.  
 
-2. **AI-Powered Text Recognition**  
+[ ] **AI-Powered Text Recognition**  
    Enable real-time reading of text from books, signs, product labels, and other everyday objects.  
 
-3. **Object Recognition**  
+[ ] **Object Recognition**  
    Train the system to identify and describe common items, such as:  
    - Furniture (chairs, tables, sofas)  
    - Household appliances (refrigerators, microwaves, washing machines)  
@@ -50,8 +57,8 @@ The project began with the idea of **manufacturing and donating physical devices
    - Animals and pets  
    - Plants and trees  
 
-4. **Spatial Awareness Features**  
+[ ] **Spatial Awareness Features**  
    Implement precise distance and direction detection to describe the relative position of objects.  
 
-5. **Energy Optimization**  
+[ ] **Energy Optimization**  
    Add an option to automatically turn off the screen during usage to save battery.  

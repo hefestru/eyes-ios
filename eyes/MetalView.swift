@@ -79,6 +79,9 @@ struct MetalDepthView: View {
     @State private var showDetectionStrip = true  // Show detection strip
     @State private var stripWidth: CGFloat = 0    // Strip width on screen
     @State private var stripStartX: CGFloat = 0   // X position of strip start
+    @State private var lastSpokenDistance: Float = 0.0  // Track last spoken distance to avoid repeating
+    @State private var lastSpeechTime: Date = Date()  // Throttle speech to avoid constant repetition
+    @State private var hasSpoken = false  // Track if we've already spoken about current obstacle
     
     var body: some View {
         if !ARWorldTrackingConfiguration.supportsFrameSemantics([.sceneDepth, .smoothedSceneDepth]) {
@@ -282,14 +285,39 @@ struct MetalDepthView: View {
         
         CVPixelBufferUnlockBaseAddress(depthData, .readOnly)
         
-        // Update collision state
+        // Update collision state and speak warning
         DispatchQueue.main.async {
             if hasObstacleInRange {
                 self.isCollisionDetected = true
                 self.collisionAlert = "DANGER!\nObstacle at \(Int(closestDistance * 100))cm"
+                
+                // Only speak if not already speaking and haven't spoken for this obstacle
+                let distanceDifference = abs(closestDistance - self.lastSpokenDistance)
+                let timeSinceLastSpeech = Date().timeIntervalSince(self.lastSpeechTime)
+                let isCurrentlySpeaking = TextToSpeech.shared.isSpeaking()
+                
+                // Only speak if:
+                // 1. Not currently speaking
+                // 2. Haven't spoken yet OR distance changed significantly (>25cm) AND enough time passed (2.5s)
+                // This prevents constant repetition
+                let shouldSpeak = !isCurrentlySpeaking && (
+                    !self.hasSpoken || 
+                    (distanceDifference > 0.25 && timeSinceLastSpeech > 2.5)
+                )
+                
+                if shouldSpeak {
+                    let distanceInCm = Int(closestDistance * 100)
+                    TextToSpeech.shared.speak("\(distanceInCm)", priority: .high)
+                    self.lastSpokenDistance = closestDistance
+                    self.lastSpeechTime = Date()
+                    self.hasSpoken = true
+                }
             } else {
                 self.isCollisionDetected = false
                 self.collisionAlert = ""
+                // Reset tracking when no obstacle detected
+                self.lastSpokenDistance = 0.0
+                self.hasSpoken = false
             }
         }
     }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AED3761A2757534400C631A2 /* EnvironmentVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED376192757534400C631A2 /* EnvironmentVariables.swift */; };
+		AED3761B2757534400C631A3 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED3761A2757534400C631A3 /* TextToSpeech.swift */; };
 		E4DF0B0824CF1A1D0024833B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DF0B0724CF1A1D0024833B /* Assets.xcassets */; };
 		E4DF0B1B24CF1A810024833B /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0B1224CF1A7F0024833B /* MetalView.swift */; };
 		E4DF0B1C24CF1A810024833B /* MetalTextureViewCoefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0B1324CF1A7F0024833B /* MetalTextureViewCoefs.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		862BDBE3A68AAEF29B3782C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AED376192757534400C631A2 /* EnvironmentVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentVariables.swift; sourceTree = "<group>"; };
+		AED3761A2757534400C631A3 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		E4DF0AFE24CF1A1A0024833B /* eyes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eyes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DF0B0724CF1A1D0024833B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4DF0B0C24CF1A1D0024833B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				E4DF0B1824CF1A800024833B /* ARDataProvider.swift */,
 				E4DF0B1724CF1A800024833B /* PointCloudDepthSample.swift */,
 				AED376192757534400C631A2 /* EnvironmentVariables.swift */,
+				AED3761A2757534400C631A3 /* TextToSpeech.swift */,
 				E4DF0B1524CF1A800024833B /* ARReceiver.swift */,
 				E4DF0B1324CF1A7F0024833B /* MetalTextureViewCoefs.swift */,
 				E4DF0B1624CF1A800024833B /* MetalTextureViewConfidence.swift */,
@@ -156,6 +159,7 @@
 				E4DF0B1D24CF1A810024833B /* MetalTextureViewDepth.swift in Sources */,
 				E4DF0B1C24CF1A810024833B /* MetalTextureViewCoefs.swift in Sources */,
 				AED3761A2757534400C631A2 /* EnvironmentVariables.swift in Sources */,
+				AED3761B2757534400C631A3 /* TextToSpeech.swift in Sources */,
 				E4DF0B1F24CF1A810024833B /* MetalTextureViewConfidence.swift in Sources */,
 				E4DF0B1B24CF1A810024833B /* MetalView.swift in Sources */,
 				E4DF0B2124CF1A810024833B /* ARDataProvider.swift in Sources */,
