@@ -18,6 +18,7 @@
 		E4DF0B2024CF1A810024833B /* PointCloudDepthSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0B1724CF1A800024833B /* PointCloudDepthSample.swift */; };
 		E4DF0B2124CF1A810024833B /* ARDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0B1824CF1A800024833B /* ARDataProvider.swift */; };
 		E4DF0B2224CF1A810024833B /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0B1924CF1A800024833B /* shaders.metal */; };
+		E4DF0B2324CF1A810024833C /* ScreenBrightnessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF0B1A24CF1A810024833C /* ScreenBrightnessController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		E4DF0B1724CF1A800024833B /* PointCloudDepthSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointCloudDepthSample.swift; sourceTree = "<group>"; };
 		E4DF0B1824CF1A800024833B /* ARDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARDataProvider.swift; sourceTree = "<group>"; };
 		E4DF0B1924CF1A800024833B /* shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = shaders.metal; sourceTree = "<group>"; };
+		E4DF0B1A24CF1A810024833C /* ScreenBrightnessController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBrightnessController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				E4DF0B1724CF1A800024833B /* PointCloudDepthSample.swift */,
 				AED376192757534400C631A2 /* EnvironmentVariables.swift */,
 				AED3761A2757534400C631A3 /* TextToSpeech.swift */,
+				E4DF0B1A24CF1A810024833C /* ScreenBrightnessController.swift */,
 				E4DF0B1524CF1A800024833B /* ARReceiver.swift */,
 				E4DF0B1324CF1A7F0024833B /* MetalTextureViewCoefs.swift */,
 				E4DF0B1624CF1A800024833B /* MetalTextureViewConfidence.swift */,
@@ -160,6 +163,7 @@
 				E4DF0B1C24CF1A810024833B /* MetalTextureViewCoefs.swift in Sources */,
 				AED3761A2757534400C631A2 /* EnvironmentVariables.swift in Sources */,
 				AED3761B2757534400C631A3 /* TextToSpeech.swift in Sources */,
+				E4DF0B2324CF1A810024833C /* ScreenBrightnessController.swift in Sources */,
 				E4DF0B1F24CF1A810024833B /* MetalTextureViewConfidence.swift in Sources */,
 				E4DF0B1B24CF1A810024833B /* MetalView.swift in Sources */,
 				E4DF0B2124CF1A810024833B /* ARDataProvider.swift in Sources */,

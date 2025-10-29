@@ -43,9 +43,6 @@ See `TextToSpeech.swift` for detailed usage examples and documentation.
 - [x] **Audio Feedback**  
   Real-time audio warnings for obstacle detection with distance announcement in centimeters.
 
-- [ ] **Enhanced Audio Feedback**  
-  Add reference sounds and spatial audio cues to help users understand their environment more intuitively.
-
 - [ ] **AI-Powered Text Recognition**  
   Enable real-time reading of text from books, signs, product labels, and other everyday objects.
 
@@ -63,7 +60,7 @@ See `TextToSpeech.swift` for detailed usage examples and documentation.
 - [ ] **Spatial Awareness Features**  
   Implement precise distance and direction detection to describe the relative position of objects.
 
-- [ ] **Energy Optimization**  
+- [x] **Energy Optimization**  
   Add an option to automatically turn off the screen during usage to save battery.
 
 - [ ] **Navigation System with Map**  
@@ -72,3 +69,5 @@ See `TextToSpeech.swift` for detailed usage examples and documentation.
   - Integration with AR depth sensing to avoid obstacles along the route
   - Audio feedback for turns, distance to destination, and route updates
   - Offline map support for areas with poor connectivity  
+
+- [ ] **Startup optimization**

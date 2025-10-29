@@ -64,6 +64,9 @@ struct MetalDepthView: View {
     // View mode switching
     @State private var isDepthMode = true
     
+    // Screen brightness controller
+    @StateObject private var brightnessController = ScreenBrightnessController()
+    
     // ========================================
     // COLLISION DETECTION CONFIGURATION
     // ========================================
@@ -192,8 +195,28 @@ struct MetalDepthView: View {
                     .padding(.horizontal, 20)
                     .padding(.bottom, 50)
                 }
+                
+                // BLACK OVERLAY para pantalla completamente apagada
+                // Solo se muestra cuando isScreenDimmed es true
+                // Permite que los toques pasen a través (allowsHitTesting = false)
+                // Cubre TODA la pantalla incluyendo status bar y safe areas
+                if brightnessController.isScreenDimmed {
+                    Color.black
+                        .ignoresSafeArea(.all)
+                        .allowsHitTesting(false)  // Permite que los toques pasen a través para el doble toque
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
+                
+                // Status bar controller (invisible, only for status bar control)
+                StatusBarControllerView()
+                    .allowsHitTesting(false)
+                    .frame(width: 0, height: 0)
             }
             .ignoresSafeArea(.all)
+            .onTapGesture(count: 2) {
+                // Double tap to toggle screen brightness
+                brightnessController.toggleBrightness()
+            }
             .onAppear {
                 // Initialize ARKit more robustly
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -202,6 +225,8 @@ struct MetalDepthView: View {
                 }
                 // Keep screen on during use
                 UIApplication.shared.isIdleTimerDisabled = true
+                // Initialize brightness controller
+                brightnessController.initialize()
             }
             .onDisappear {
                 stopCollisionDetection()
@@ -209,6 +234,8 @@ struct MetalDepthView: View {
                 arProvider.pause()
                 // Restore normal screen behavior
                 UIApplication.shared.isIdleTimerDisabled = false
+                // Restore original brightness (status bar restoration handled by controller)
+                brightnessController.restoreBrightness()
             }
         }
     }
