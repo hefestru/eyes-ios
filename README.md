@@ -40,25 +40,35 @@ See `TextToSpeech.swift` for detailed usage examples and documentation.
 
 ## TO-DO
 
-[x] **Enhanced Audio Feedback**  
-   Add reference sounds and spatial audio cues to help users understand their environment more intuitively.  
+- [x] **Audio Feedback**  
+  Real-time audio warnings for obstacle detection with distance announcement in centimeters.
 
-[ ] **AI-Powered Text Recognition**  
-   Enable real-time reading of text from books, signs, product labels, and other everyday objects.  
+- [ ] **Enhanced Audio Feedback**  
+  Add reference sounds and spatial audio cues to help users understand their environment more intuitively.
 
-[ ] **Object Recognition**  
-   Train the system to identify and describe common items, such as:  
-   - Furniture (chairs, tables, sofas)  
-   - Household appliances (refrigerators, microwaves, washing machines)  
-   - Electronic devices (phones, computers, TVs)  
-   - Food items and packaging  
-   - Clothing and accessories  
-   - Transportation vehicles (cars, buses, bicycles)  
-   - Animals and pets  
-   - Plants and trees  
+- [ ] **AI-Powered Text Recognition**  
+  Enable real-time reading of text from books, signs, product labels, and other everyday objects.
 
-[ ] **Spatial Awareness Features**  
-   Implement precise distance and direction detection to describe the relative position of objects.  
+- [ ] **Object Recognition**  
+  Train the system to identify and describe common items, such as:
+  - Furniture (chairs, tables, sofas)
+  - Household appliances (refrigerators, microwaves, washing machines)
+  - Electronic devices (phones, computers, TVs)
+  - Food items and packaging
+  - Clothing and accessories
+  - Transportation vehicles (cars, buses, bicycles)
+  - Animals and pets
+  - Plants and trees
 
-[ ] **Energy Optimization**  
-   Add an option to automatically turn off the screen during usage to save battery.  
+- [ ] **Spatial Awareness Features**  
+  Implement precise distance and direction detection to describe the relative position of objects.
+
+- [ ] **Energy Optimization**  
+  Add an option to automatically turn off the screen during usage to save battery.
+
+- [ ] **Navigation System with Map**  
+  Implement an integrated navigation system with map functionality that provides audio-guided directions for visually impaired users. Features should include:
+  - Real-time GPS-based navigation with voice announcements
+  - Integration with AR depth sensing to avoid obstacles along the route
+  - Audio feedback for turns, distance to destination, and route updates
+  - Offline map support for areas with poor connectivity  
